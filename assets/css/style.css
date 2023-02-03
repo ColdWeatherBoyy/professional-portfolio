@@ -122,8 +122,8 @@ main {
   font-size: 32px;
 }
 .content-about-me {
+  border-top: 2px solid;
   margin: 10px;
-  
 }
 
 .portfolio-links {
@@ -140,7 +140,7 @@ main {
 
 .main-feature img {
   max-width: 90vmax;
-  max-height: 40vmax;
+  max-height: 90vh;
   padding: 10px;
 }
 
