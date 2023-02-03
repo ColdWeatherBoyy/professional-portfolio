@@ -1,5 +1,11 @@
+html {
+  height: 100%;
+}
+
+/* base settings for the body of the page, with mobile first in mind*/
 body {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
   font-size: 16px;
   display: flex;
   flex-flow: column;
@@ -7,6 +13,7 @@ body {
   color: #203354;
 }
 
+/* type selectors */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bolder;
 }
@@ -44,7 +51,6 @@ header h1 {
   background-color:#B8C7F1;
   color: #005D82;
   padding: 15px;
-  align-content: space-around;
   margin-bottom: 3px;
 }
 
@@ -52,19 +58,48 @@ nav {
   align-items: center;
 }
 
-ul {
-  align-items: center;
-}
-
 li {
-  text-decoration: underline;
-  font-size: larger;
+  text-decoration: none;
+  font-size: x-large;
   margin: 8px;
   width: 100%;
+  text-align: center;
 }
 
 a {
   text-align: none;
   text-decoration: none;
   color: #B8C7F1;
+}
+
+a:hover {
+  border-bottom: 3px solid #B8C7F1
+}
+
+section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+/* setting up banner hero image with overlaid text */
+.hero-image {
+  height: 200px;
+  width: 100%;
+  background-image: url("../images/snowy-trees-unsplash.jpg");
+  background-position: center 30%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;  
+  
+}
+
+.hero-text {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  background-color:#B8C7F1;
+  color: #005D82;
+  border-radius: 20px;
 }
