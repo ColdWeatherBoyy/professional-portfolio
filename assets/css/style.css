@@ -140,7 +140,7 @@ main {
 
 .main-feature img {
   max-width: 90vmax;
-  height: auto;
+  max-height: 40vmax;
   padding: 10px;
 }
 
