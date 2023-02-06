@@ -9,20 +9,25 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
+<!-- start of body, starts first flexbox -->
 <body>
+  <!-- flex-child 1, start of nested flex-box-->
   <header>
+    <!-- nested flex-child 1 -->
     <section class="enable-fixed">
       <h1>Elias S-Z</h1>
     </section>
+    <!-- nested flex-child 2 -->
     <nav>
-      <!-- links set for sections below -->
       <ul>
+        <!-- reference links for lower on page, fix link for Resume -->
         <li><a href="#about-me">About Me</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#contact-me">Contact Me</a></li>
         <li><a href="#Resume">Resume</a></li>
       </ul>
     </nav>
+    <!-- end of nested flex-box -->
   </header>
   
   <!-- Hero image section with text -->
@@ -30,10 +35,13 @@
     <h2 class="hero-text">Check it out y'all.</h2>
   </figure>
 
+<!-- start of next flex-box -->
   <main>
+    <!-- flex-child 1 -->
     <section id="about-me">
       <h3>About Me</h3>
     </section>
+    <!-- flex-child 2 -->
     <section class="content-about-me">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odit mollitia laboriosam optio voluptate ullam ut magnam debitis delectus qui! Harum tempore, libero odio unde quod ad ex quibusdam minus.
@@ -47,23 +55,28 @@
     </section>
     <!-- start of nested flexbox -->
     <section class="portfolio-links">
+      <!-- the bigger flex-child  -->
       <section class="big-feature">
         <img src="./assets/images/Horiseon-Picture.png" alt="Picture of Horiseon Project">
+          <!-- set up of text tag over project -->
           <section class="feature-title">
             <h4>Horiseon</h4>
             <p>SEO and Accessibility</p>
           </section>
       </section>
+      <!-- one of two smaller flex-childs -->
       <section class="small-features">
         <img src="./assets/images/silly_1_unsplash.jpg" alt="a pug in glasses">
       </section>
+      <!-- the other smaller flex-childs -->
       <section class="small-features">
         <img src="./assets/images/silly_2_unsplash.jpg" alt="foot and wine">
       </section>
     </section>
   </main>
 
-  <footer class="footer">
+  <!-- start of footer flex-box -->
+  <footer>
     <section id="contact-me">
       <h5>Contact Me!</h5>
     </section>

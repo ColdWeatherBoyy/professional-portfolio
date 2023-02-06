@@ -4,17 +4,16 @@ html {
 
 /* base settings for the body of the page, with mobile first in mind*/
 body {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
   font-size: 16px;
   display: flex;
   flex-flow: column;
   color: #203354;
   background-color: #B8C7F1;
-  align-items: stretch;
 }
 
-/* type selectors */
+/* base font-sizes for header elements */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bolder;
 }
@@ -39,9 +38,14 @@ h5 {
   font-size: 1.3em;
 }
 
+/* type selectors ordered by HTML */
+header, footer {
+  background-color: #005D82;
+  color:#B8C7F1;
+}
+
 header {
   width: 100%;
-  background-color: #005D82;
   padding-bottom: 5px;
   display: flex;
   flex-flow: column;
@@ -63,26 +67,19 @@ header h1 {
   border-radius: 10px;
 }
 
-nav {
-  align-items: center;
-  /* margin-top: 60px; */
-
-}
-
 li {
   text-decoration: none;
   font-size: x-large;
   margin: 8px;
-  width: 100%;
   text-align: center;
 }
 
 a {
-  text-align: none;
   text-decoration: none;
   color: #B8C7F1;
 }
 
+/* link underline pseudo-class */
 a:hover {
   border-bottom: .1em solid #B8C7F1
 }
@@ -97,6 +94,7 @@ figure {
   justify-content: right;
 }
 
+/* sets up nested flex-box */
 main {
   display: flex;
   flex-flow: column;
@@ -122,19 +120,25 @@ main {
   background-color:#B8C7F1;
   color: #005D82;
   border-radius: 20px;
-  max-width: 40%;
+  /* max-width: 40%; */
   text-align: center;
-  font-size: 1em;
+  font-size: 100%;
 }
+
+/* section is flex-child 2 */
 
 section h3 {
   font-size: 2em;
 }
+
+/* creating border bar – to left when desktop */
 .content-about-me {
   border-top: 2px solid black;
-  margin: 10px;
+  margin: 10px 30px;
 }
 
+/* creating border bar for next section – to left whend desktop */
+/* also starts internal nested flex-box */
 .portfolio-links {
   border-top: 2px solid black;
   padding-top: 1%;
@@ -142,29 +146,31 @@ section h3 {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 2px 10px 10px 10px;
+  margin: 10px 30px 0px 30px;
 }
 
-/* flex children alignment with one on one row and two the row */
+/* nested flex-child – big feature */
 .big-feature {
   box-sizing: border-box;
-  padding: 1%;
-  background-color: gray;
+  padding: 1.5%;
+  background-color: rgb(83, 83, 83);
   border: 1px solid black;
-  margin: 2.5%;
+  margin: 2% 4% 1% 4%;
   position: relative;
-  flex-basis: 97.5%;
+  flex-basis: 96%;
 }
 
+/* nested flex-child – two that have to share a row */
 .small-features {
   box-sizing: border-box;
-  padding: 1%;
-  background-color: gray;
+  padding: 1.5%;
+  background-color: rgb(83, 83, 83);
   border: 1px solid black;
-  flex-basis: 45%;
-  margin: 2.5%
+  flex-basis: 42%;
+  margin: 1% 4% 2% 4%;
 }
 
+/* controls for image sizing within their container */
 .big-feature img {
   width: 100%;
   height: auto;
@@ -175,20 +181,18 @@ section h3 {
   height: auto;
 }
 
-/* text-boxes on images attempt 1 */
-/* find a way to shrink this box. Maybe use position absolute relative to position it? */
+/* text box overlaid on project features */
 .feature-title {
-  /* border: 1px solid red; */
-  background-color: gray;
+  background-color: rgb(83, 83, 83);
   color: aliceblue;
   position: absolute;
   bottom: 10%;
-  left: .5%;
-  padding: .5% .5%;
+  left: 1.5%;
+  padding: 1%;
 }
 
 .feature-title h4{
-  font-size: 6vw;
+  font-size: 7vw;
   text-align: center;
   font-style: italic;
   text-decoration: none;
@@ -196,21 +200,20 @@ section h3 {
 }
 
 .feature-title p {
-  font-size: 2.4vw;
+  font-size: 3vw;
   text-align: left;
   margin: 0;
 }
 
-.footer {
+/* sets up footer flex-box */
+footer {
   display: flex;
   flex-flow: column;
-  background-color: #005D82;
-  color:#B8C7F1;
-  align-items: center;
+  /* align-items: center; */
 }
 
 #contact-me h5 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 2px 0;
   text-align: center;
   align-self: center;
@@ -218,7 +221,7 @@ section h3 {
 
 #content-info ul {
   border-top: 2px solid #B8C7F1;
-  margin: 0px 10px;
+  margin: 0px 30px;
   text-align: center;
   align-self: center;
 }
