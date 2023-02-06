@@ -1,0 +1,233 @@
+html {
+  height: 100%;
+}
+
+/* base settings for the body of the page, with mobile first in mind*/
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  display: flex;
+  flex-flow: column;
+  color: #203354;
+  background-color: #B8C7F1;
+}
+
+/* base font-sizes for header elements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.7emx;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.3em;
+}
+
+/* type selectors ordered by HTML */
+header, footer {
+  background-color: #005D82;
+  color:#B8C7F1;
+}
+
+header {
+  width: 100%;
+  padding-bottom: 5px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* commented out sticky header */
+/* header section {
+  position: fixed;
+  top: 0px;
+} */
+
+header h1 {
+  background-color:#B8C7F1;
+  color: #005D82;
+  padding: 15px;
+  margin-bottom: 3px;
+  border-radius: 10px;
+}
+
+li {
+  text-decoration: none;
+  font-size: x-large;
+  margin: 8px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #B8C7F1;
+}
+
+/* link underline pseudo-class */
+a:hover {
+  border-bottom: .1em solid #B8C7F1
+}
+
+p {
+  margin: 10px 20px;
+}
+
+figure {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+/* sets up nested flex-box */
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+
+/* setting up banner hero image with overlaid text */
+.hero-image {
+  height: 25vw;
+  background-image: url("../images/snowy-trees-unsplash.jpg");
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;  
+
+}
+/* class set for text sub */
+.hero-text {
+  margin-bottom: 2%;
+  margin-right: 1%;
+  padding: 5px;
+  background-color:#B8C7F1;
+  color: #005D82;
+  border-radius: 20px;
+  /* max-width: 40%; */
+  text-align: center;
+  font-size: 100%;
+}
+
+/* section is flex-child 2 */
+
+section h3 {
+  font-size: 2em;
+}
+
+/* creating border bar – to left when desktop */
+.content-about-me {
+  border-top: 2px solid black;
+  margin: 10px 30px;
+}
+
+/* creating border bar for next section – to left whend desktop */
+/* also starts internal nested flex-box */
+.portfolio-links {
+  border-top: 2px solid black;
+  padding-top: 1%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 30px 0px 30px;
+}
+
+/* nested flex-child – big feature */
+.big-feature {
+  box-sizing: border-box;
+  padding: 1.5%;
+  background-color: rgb(83, 83, 83);
+  border: 1px solid black;
+  margin: 2% 4% 1% 4%;
+  position: relative;
+  flex-basis: 96%;
+}
+
+/* nested flex-child – two that have to share a row */
+.small-features {
+  box-sizing: border-box;
+  padding: 1.5%;
+  background-color: rgb(83, 83, 83);
+  border: 1px solid black;
+  flex-basis: 42%;
+  margin: 1% 4% 2% 4%;
+}
+
+/* controls for image sizing within their container */
+.big-feature img {
+  width: 100%;
+  height: auto;
+}
+
+.small-features img {
+  width: 100%;
+  height: auto;
+}
+
+/* text box overlaid on project features */
+.feature-title {
+  background-color: rgb(83, 83, 83);
+  color: aliceblue;
+  position: absolute;
+  bottom: 10%;
+  left: 1.5%;
+  padding: 1%;
+}
+
+.feature-title h4{
+  font-size: 7vw;
+  text-align: center;
+  font-style: italic;
+  text-decoration: none;
+  text-align: left;
+}
+
+.feature-title p {
+  font-size: 3vw;
+  text-align: left;
+  margin: 0;
+}
+
+/* sets up footer flex-box */
+footer {
+  display: flex;
+  flex-flow: column;
+  /* align-items: center; */
+}
+
+#contact-me h5 {
+  font-size: 2em;
+  margin: 2px 0;
+  text-align: center;
+  align-self: center;
+}
+
+#content-info ul {
+  border-top: 2px solid #B8C7F1;
+  margin: 0px 30px;
+  text-align: center;
+  align-self: center;
+}
+
+#content-info ul li {
+  font-size: 1em;
+  color:#B8C7F1;
+}
+
