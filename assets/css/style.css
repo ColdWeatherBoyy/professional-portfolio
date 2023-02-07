@@ -45,7 +45,6 @@ header, footer {
 }
 
 header {
-  width: 100%;
   padding-bottom: 5px;
   display: flex;
   flex-flow: column;
@@ -53,17 +52,11 @@ header {
   justify-content: center;
 }
 
-/* commented out sticky header */
-/* header section {
-  position: fixed;
-  top: 0px;
-} */
-
 header h1 {
   background-color:#B8C7F1;
   color: #005D82;
   padding: 15px;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   border-radius: 10px;
 }
 
@@ -120,7 +113,6 @@ main {
   background-color:#B8C7F1;
   color: #005D82;
   border-radius: 20px;
-  /* max-width: 40%; */
   text-align: center;
   font-size: 100%;
 }
@@ -131,13 +123,13 @@ section h3 {
   font-size: 2em;
 }
 
-/* creating border bar – to left when desktop */
+/* creating border bar */
 .content-about-me {
   border-top: 2px solid black;
   margin: 10px 30px;
 }
 
-/* creating border bar for next section – to left whend desktop */
+/* creating border bar for next section */
 /* also starts internal nested flex-box */
 .portfolio-links {
   border-top: 2px solid black;
@@ -168,6 +160,7 @@ section h3 {
   border: 1px solid black;
   flex-basis: 42%;
   margin: 1% 4% 2% 4%;
+  position: relative;
 }
 
 /* controls for image sizing within their container */
@@ -209,25 +202,124 @@ section h3 {
 footer {
   display: flex;
   flex-flow: column;
-  /* align-items: center; */
+  align-items: stretch;
 }
 
 #contact-me h5 {
   font-size: 2em;
   margin: 2px 0;
   text-align: center;
-  align-self: center;
 }
 
-#content-info ul {
+#contact-info {
+  display: flex;
+  flex-direction: column;
   border-top: 2px solid #B8C7F1;
-  margin: 0px 30px;
-  text-align: center;
-  align-self: center;
-}
+  margin: 0 30px;
+} 
 
-#content-info ul li {
+#contact-info ul li {
   font-size: 1em;
   color:#B8C7F1;
 }
 
+/* media queries for tablet */
+
+/* change of border location, reconfigures flex boxes */
+
+@media screen and (min-width:675px) {
+  header {
+    display: flex;
+    flex-flow: row;
+    justify-content:space-between;
+    padding: 5px 15px;
+  }
+
+  header h1 {
+    margin: 10px 0;
+  }
+
+  header nav {
+    align-self: flex-end;
+  }
+
+
+  header nav ul {
+    display:flex;
+    flex-flow:row;
+  }
+
+  .hero-text {
+    font-size: 125%;
+  }
+
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: start;
+  }
+
+  .content-about-me, .portfolio-links {
+    border-top: 0;
+    border-left: 2px solid black;
+    width: 77%;
+    flex-basis: 77%;
+    margin: 1% 0;
+  }
+
+  #about-me, #work {
+    width: 17%;
+    flex-basis: 17%;
+    text-align: right;
+    margin: 2%;
+  }
+
+  .feature-title h4{
+    font-size: 5vw;
+  }
+
+  .feature-title p {
+    font-size: 2vw;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: start;
+  }
+  
+  #contact-me h5 {
+    font-size: 2em;
+    text-align: right;
+    margin: 2%;
+  }
+  
+  #contact-info {
+    display: flex;
+    flex-direction: row;
+    border-top: 0;
+    border-left: 2px solid #B8C7F1;
+    margin: 1% 1%;
+  }
+  
+  #contact-info ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  #contact-info ul li {
+    font-size: 1.25em;
+    color:#B8C7F1;
+  }
+
+
+}
+
+/* media queries for desktop */
+@media screen and (min-width:1100px) {
+
+  
+}
