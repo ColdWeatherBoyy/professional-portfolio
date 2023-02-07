@@ -13,26 +13,28 @@
 <body>
   <!-- flex-child 1, start of nested flex-box-->
   <header>
-    <!-- nested flex-child 1 -->
-    <section>
-      <h1>Elias S-Z</h1>
-    </section>
-    <!-- nested flex-child 2 -->
-    <nav>
-      <ul>
-        <!-- reference links for lower on page, fix link for Resume -->
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact-me">Contact Me</a></li>
-        <li><a href="#Resume">Resume</a></li>
-      </ul>
-    </nav>
-    <!-- end of nested flex-box -->
+      <!-- nested flex-child 1 -->
+      <section class="small-screen-name">
+        <h1>Elias S-Z</h1>
+      </section>
+      <section class="big-screen-name">
+        <h1>Elias Spector-Zabusky</h1>
+      </section>
+      <!-- nested flex-child 2 -->
+      <nav>
+        <ul>
+          <!-- reference links for lower on page, fix link for Resume -->
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+      </nav>
+        <!-- end of nested flex-box -->
   </header>
   
   <!-- Hero image section with text -->
-  <figure class="hero-image" aria-label="a forest covered in snow">
-    <h2 class="hero-text">Check it out y'all.</h2>
+  <figure class="hero-image" aria-label="Stolen Jars show at Elsewhere, Elias playing guitar on left">
+    <h2 class="hero-text"><--- I'm the one on the left</h2>
   </figure>
 
 <!-- start of next flex-box -->
@@ -47,7 +49,7 @@
         As a new full-stack developer, this is the beginnings of my portfolio page. You'll find links to one project currently, with some stand-in links to future projects that I look forward to working on as well.
       </p>
       <p>
-        Feel free to click around - my contact info is at the bottom if you want to reach me directly. Cheers!
+        Feel free to click around - my <span><a href="#contact-me">contact info</a></span> is at the bottom if you want to reach me directly. Cheers!
       </p>
     </section>
     <section id="work">

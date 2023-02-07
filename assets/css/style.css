@@ -19,23 +19,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 2.25em;
 }
 
 h3 {
-  font-size: 1.7emx;
+  font-size: 2em;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.75em;
 }
 
 h5 {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 /* type selectors ordered by HTML */
@@ -45,19 +45,27 @@ header, footer {
 }
 
 header {
-  padding-bottom: 5px;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
 }
 
-header h1 {
+h1 {
   background-color:#B8C7F1;
   color: #005D82;
   padding: 15px;
   margin-bottom: 5px;
   border-radius: 10px;
+}
+
+.big-screen-name {
+  display: none;
+}
+
+nav {
+  align-self: center;
+  padding-top: 5px;
 }
 
 li {
@@ -87,18 +95,10 @@ figure {
   justify-content: right;
 }
 
-/* sets up nested flex-box */
-main {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-
 /* setting up banner hero image with overlaid text */
 .hero-image {
   height: 25vw;
-  background-image: url("../images/snowy-trees-unsplash.jpg");
+  background-image: url("../images/elias_banner.jpeg");
   background-position: center 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -117,16 +117,27 @@ main {
   font-size: 100%;
 }
 
-/* section is flex-child 2 */
-
-section h3 {
-  font-size: 2em;
+/* sets up next flex-box */
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 /* creating border bar */
 .content-about-me {
   border-top: 2px solid black;
   margin: 10px 30px;
+}
+
+.content-about-me span a {
+  color: #203354;
+  text-decoration: underline;
+}
+
+.content-about-me span a:hover {
+  background-color: #203354;
+  color: #B8C7F1;
 }
 
 /* creating border bar for next section */
@@ -182,10 +193,11 @@ section h3 {
   bottom: 10%;
   left: 1.5%;
   padding: 1%;
+  line-height: 1.25;
 }
 
 .feature-title h4{
-  font-size: 7vw;
+  font-size: 6vw;
   text-align: center;
   font-style: italic;
   text-decoration: none;
@@ -193,7 +205,7 @@ section h3 {
 }
 
 .feature-title p {
-  font-size: 3vw;
+  font-size: 2.5vw;
   text-align: left;
   margin: 0;
 }
@@ -233,7 +245,7 @@ footer {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    padding: 5px 15p  x;
+    padding: 5px 15px;
   }
 
   header h1 {
@@ -264,7 +276,7 @@ footer {
     width: 17%;
     flex-basis: 17%;
     text-align: right;
-    margin: 2%;
+    margin: 1% 2%;
   }
 
   .content-about-me, .portfolio-links {
@@ -276,7 +288,7 @@ footer {
   }
 
   .feature-title h4{
-    font-size: 5vw;
+    font-size: 4.75vw;
   }
 
   .feature-title p {
@@ -335,6 +347,19 @@ footer {
 
 /* media queries for desktop */
 @media screen and (min-width:1100px) {
-
+  .big-screen-name {
+    display: block;
+  }
+  .small-screen-name {
+    display: none;
+  }
   
+  .feature-title h4{
+    font-size: 4.5vw;
+  }
+
+  .feature-title p {
+    font-size: 1.75vw;
+  }
+
 }
