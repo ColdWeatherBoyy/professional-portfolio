@@ -13,26 +13,28 @@
 <body>
   <!-- flex-child 1, start of nested flex-box-->
   <header>
-    <!-- nested flex-child 1 -->
-    <section class="enable-fixed">
-      <h1>Elias S-Z</h1>
-    </section>
-    <!-- nested flex-child 2 -->
-    <nav>
-      <ul>
-        <!-- reference links for lower on page, fix link for Resume -->
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact-me">Contact Me</a></li>
-        <li><a href="#Resume">Resume</a></li>
-      </ul>
-    </nav>
-    <!-- end of nested flex-box -->
+      <!-- nested flex-child 1 -->
+      <section class="small-screen-name">
+        <h1>Elias S-Z</h1>
+      </section>
+      <section class="big-screen-name">
+        <h1>Elias Spector-Zabusky</h1>
+      </section>
+      <!-- nested flex-child 2 -->
+      <nav>
+        <ul>
+          <!-- reference links for lower on page, fix link for Resume -->
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+      </nav>
+        <!-- end of nested flex-box -->
   </header>
   
   <!-- Hero image section with text -->
-  <figure class="hero-image" aria-label="a forest covered in snow">
-    <h2 class="hero-text">Check it out y'all.</h2>
+  <figure class="hero-image" aria-label="Stolen Jars show at Elsewhere, Elias playing guitar on left">
+    <h2 class="hero-text"><--- I'm the one on the left</h2>
   </figure>
 
 <!-- start of next flex-box -->
@@ -44,10 +46,10 @@
     <!-- flex-child 2 -->
     <section class="content-about-me">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odit mollitia laboriosam optio voluptate ullam ut magnam debitis delectus qui! Harum tempore, libero odio unde quod ad ex quibusdam minus.
+        As a new full-stack developer, this is the beginnings of my portfolio page. You'll find links to one project currently, with some stand-in links to future projects that I look forward to working on as well.
       </p>
       <p>
-        One two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen
+        Feel free to click around - my <span><a href="#contact-me">contact info</a></span> is at the bottom if you want to reach me directly. Cheers!
       </p>
     </section>
     <section id="work">
@@ -67,10 +69,18 @@
       <!-- one of two smaller flex-childs -->
       <section class="small-features">
         <img src="./assets/images/silly_1_unsplash.jpg" alt="a pug in glasses">
+          <!-- <section class="feature-title-small">
+            <h4>This Would Be</h4>
+            <p>A very cool project</p>
+          </section> -->
       </section>
       <!-- the other smaller flex-childs -->
       <section class="small-features">
         <img src="./assets/images/silly_2_unsplash.jpg" alt="foot and wine">
+          <!-- <section class="feature-title-small">
+            <h4>This Would Be</h4>
+            <p>A very cool project</p>
+          </section> -->
       </section>
     </section>
   </main>
@@ -80,13 +90,12 @@
     <section id="contact-me">
       <h5>Contact Me!</h5>
     </section>
-    <section id="content-info">
+    <section id="contact-info">
       <ul>
         <li><a href="tel:607-592-5831">607-592-5831</a></li>
-        <li><a href="mailto:elias.spector.zabusky@gmail.com">Email Me Here</a></li>
+        <li><a href="mailto:elias.spector.zabusky@gmail.com">Email Me Here!</a></li>
         <li><a href="https://github.com/ColdWeatherBoyy" target="_blank" rel="noreferrer noopener">Github</a></li>
         <li><a href="#">Link</a></li>
-        <li><a href="#">Link2</a></li>
       </ul>
     </section>
   </footer>

@@ -6,7 +6,7 @@ html {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   flex-flow: column;
   color: #203354;
@@ -19,23 +19,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 2.25em;
 }
 
 h3 {
-  font-size: 1.7emx;
+  font-size: 2em;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.75em;
 }
 
 h5 {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 /* type selectors ordered by HTML */
@@ -45,26 +45,27 @@ header, footer {
 }
 
 header {
-  width: 100%;
-  padding-bottom: 5px;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
 }
 
-/* commented out sticky header */
-/* header section {
-  position: fixed;
-  top: 0px;
-} */
-
-header h1 {
+h1 {
   background-color:#B8C7F1;
   color: #005D82;
   padding: 15px;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   border-radius: 10px;
+}
+
+.big-screen-name {
+  display: none;
+}
+
+nav {
+  align-self: center;
+  padding-top: 5px;
 }
 
 li {
@@ -94,24 +95,16 @@ figure {
   justify-content: right;
 }
 
-/* sets up nested flex-box */
-main {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-
 /* setting up banner hero image with overlaid text */
 .hero-image {
   height: 25vw;
-  background-image: url("../images/snowy-trees-unsplash.jpg");
+  background-image: url("../images/elias_banner.jpeg");
   background-position: center 50%;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 20px;  
-
 }
+
 /* class set for text sub */
 .hero-text {
   margin-bottom: 2%;
@@ -120,24 +113,34 @@ main {
   background-color:#B8C7F1;
   color: #005D82;
   border-radius: 20px;
-  /* max-width: 40%; */
   text-align: center;
   font-size: 100%;
 }
 
-/* section is flex-child 2 */
-
-section h3 {
-  font-size: 2em;
+/* sets up next flex-box */
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
-/* creating border bar – to left when desktop */
+/* creating border bar */
 .content-about-me {
   border-top: 2px solid black;
   margin: 10px 30px;
 }
 
-/* creating border bar for next section – to left whend desktop */
+.content-about-me span a {
+  color: #203354;
+  text-decoration: underline;
+}
+
+.content-about-me span a:hover {
+  background-color: #203354;
+  color: #B8C7F1;
+}
+
+/* creating border bar for next section */
 /* also starts internal nested flex-box */
 .portfolio-links {
   border-top: 2px solid black;
@@ -146,7 +149,7 @@ section h3 {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 30px 0px 30px;
+  margin: 10px 30px 10px 30px;
 }
 
 /* nested flex-child – big feature */
@@ -168,6 +171,7 @@ section h3 {
   border: 1px solid black;
   flex-basis: 42%;
   margin: 1% 4% 2% 4%;
+  position: relative;
 }
 
 /* controls for image sizing within their container */
@@ -189,10 +193,11 @@ section h3 {
   bottom: 10%;
   left: 1.5%;
   padding: 1%;
+  line-height: 1.25;
 }
 
 .feature-title h4{
-  font-size: 7vw;
+  font-size: 6vw;
   text-align: center;
   font-style: italic;
   text-decoration: none;
@@ -200,7 +205,7 @@ section h3 {
 }
 
 .feature-title p {
-  font-size: 3vw;
+  font-size: 2.5vw;
   text-align: left;
   margin: 0;
 }
@@ -209,25 +214,152 @@ section h3 {
 footer {
   display: flex;
   flex-flow: column;
-  /* align-items: center; */
+  align-items: stretch;
+  padding: 1% 0;
 }
 
 #contact-me h5 {
   font-size: 2em;
   margin: 2px 0;
   text-align: center;
-  align-self: center;
 }
 
-#content-info ul {
+#contact-info {
+  display: flex;
+  flex-direction: column;
   border-top: 2px solid #B8C7F1;
-  margin: 0px 30px;
-  text-align: center;
-  align-self: center;
-}
+  margin: 0 30px;
+} 
 
-#content-info ul li {
+#contact-info ul li {
   font-size: 1em;
   color:#B8C7F1;
 }
 
+/* media queries for tablet */
+
+/* change of border location, reconfigures flex boxes */
+
+@media screen and (min-width:650px) {
+  header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 5px 15px;
+  }
+
+  header h1 {
+    margin: 10px 0;
+  }
+
+  header nav {
+    align-self: flex-end;
+  }
+
+
+  header nav ul {
+    display:flex;
+    flex-flow:row;
+  }
+
+  .hero-text {
+    font-size: 125%;
+  }
+
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: start;
+  }
+
+  #about-me, #work {
+    width: 17%;
+    flex-basis: 17%;
+    text-align: right;
+    margin: 1% 2%;
+  }
+
+  .content-about-me, .portfolio-links {
+    border-left: 2px solid black;
+    border-top: 0;
+    width: 77%;
+    flex-basis: 77%;
+    margin: 1% 0;
+  }
+
+  .feature-title h4{
+    font-size: 4.75vw;
+  }
+
+  .feature-title p {
+    font-size: 2vw;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 100%;
+    align-items: stretch;
+    padding: 2% 0;
+  }
+  
+  #contact-me {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    width: 17%;
+    flex-basis: 17%;
+    margin: 2% 1% 2% 3%;
+  }
+
+  #contact-me h5 {
+    text-align: right;
+    
+  }
+  
+  #contact-info {
+    display: flex;
+    flex-direction: row;
+    border-left: 2px solid #B8C7F1;
+    border-top: 0;
+    margin: 0;
+    width: 77%;
+    flex-basis: 77%;
+    justify-content: center;
+  }
+  
+  #contact-info ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  #contact-info ul li {
+    font-size: 1.25em;
+    color:#B8C7F1;
+  }
+
+
+}
+
+/* media queries for desktop */
+@media screen and (min-width:1100px) {
+  .big-screen-name {
+    display: block;
+  }
+  .small-screen-name {
+    display: none;
+  }
+  
+  .feature-title h4{
+    font-size: 4.5vw;
+  }
+
+  .feature-title p {
+    font-size: 1.75vw;
+  }
+
+}
