@@ -6,7 +6,7 @@ html {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   flex-flow: column;
   color: #203354;
@@ -103,8 +103,8 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 20px;  
-
 }
+
 /* class set for text sub */
 .hero-text {
   margin-bottom: 2%;
@@ -138,7 +138,7 @@ section h3 {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 30px 0px 30px;
+  margin: 10px 30px 10px 30px;
 }
 
 /* nested flex-child – big feature */
@@ -203,6 +203,7 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: stretch;
+  padding: 1% 0;
 }
 
 #contact-me h5 {
@@ -227,12 +228,12 @@ footer {
 
 /* change of border location, reconfigures flex boxes */
 
-@media screen and (min-width:675px) {
+@media screen and (min-width:650px) {
   header {
     display: flex;
     flex-flow: row;
-    justify-content:space-between;
-    padding: 5px 15px;
+    justify-content: space-between;
+    padding: 5px 15p  x;
   }
 
   header h1 {
@@ -259,19 +260,19 @@ footer {
     align-items: start;
   }
 
-  .content-about-me, .portfolio-links {
-    border-top: 0;
-    border-left: 2px solid black;
-    width: 77%;
-    flex-basis: 77%;
-    margin: 1% 0;
-  }
-
   #about-me, #work {
     width: 17%;
     flex-basis: 17%;
     text-align: right;
     margin: 2%;
+  }
+
+  .content-about-me, .portfolio-links {
+    border-left: 2px solid black;
+    border-top: 0;
+    width: 77%;
+    flex-basis: 77%;
+    margin: 1% 0;
   }
 
   .feature-title h4{
@@ -285,29 +286,43 @@ footer {
   footer {
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
-    align-items: start;
+    align-items: center;
+    width: 100%;
+    align-items: stretch;
+    padding: 2% 0;
   }
   
+  #contact-me {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    width: 17%;
+    flex-basis: 17%;
+    margin: 2% 1% 2% 3%;
+  }
+
   #contact-me h5 {
-    font-size: 2em;
     text-align: right;
-    margin: 2%;
+    
   }
   
   #contact-info {
     display: flex;
     flex-direction: row;
-    border-top: 0;
     border-left: 2px solid #B8C7F1;
-    margin: 1% 1%;
+    border-top: 0;
+    margin: 0;
+    width: 77%;
+    flex-basis: 77%;
+    justify-content: center;
   }
   
   #contact-info ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
   }
   
   #contact-info ul li {
