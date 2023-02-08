@@ -21,8 +21,9 @@
       <section class="big-screen-name">
         <h1>Elias Spector-Zabusky</h1>
       </section>
-      <!-- nested flex-child 2 -->
+      <!-- flex child 2 -->
       <nav class="header-nav">
+        <!-- flex box on larger screens -->
         <ul class="header-nav-list">
           <!-- reference links for lower on page, fix link for Resume -->
           <li><a href="#about-me">About Me</a></li>
@@ -30,21 +31,22 @@
           <li><a href="#contact-me">Contact Me</a></li>
         </ul>
       </nav>
-        <!-- end of nested flex-box -->
+        <!-- end of flexbox -->
   </header>
-  
-  <!-- Hero image section with text -->
+  <!-- end of header flexbox -->
+
+  <!-- Hero image section with text, uses flexbox for p tag formatting -->
   <figure class="hero-image" aria-label="Stolen Jars show at Elsewhere, Elias playing guitar on left">
     <p class="hero-text"><--- I'm the one on the left</p>
   </figure>
 
-<!-- start of next flex-box -->
+<!-- start of main flexbox -->
   <main>
-    <!-- flex-child 1 -->
+    <!-- flex child 1 -->
     <section id="about-me">
       <h2>About Me</h2>
     </section>
-    <!-- flex-child 2 -->
+    <!-- flex child 2 -->
     <section class="content-about-me">
       <p>
         As a new full-stack developer, this is the beginnings of my portfolio page. You'll find links to a few projects currently, and I look forward to filling this out with more projects as I complete my education.
@@ -53,16 +55,17 @@
         Feel free to click around - my <span class="link-underline"><a href="#contact-me">contact info</a></span> is at the bottom if you want to reach me directly. Cheers!
       </p>
     </section>
+    <!-- flex child 3 -->
     <section id="work">
       <h2>Work</h2>
     </section>
-    <!-- start of nested flexbox -->
+    <!-- flex child 4 and start of nested flexbox -->
     <section class="portfolio-links">
       <!-- the bigger flex-child  -->
       <section class="big-feature">
         <a class="project-links" href="https://coldweatherboyy.github.io/seo-challenge-1" target="_blank" rel="nopener noreferrer">
         <img src="./assets/images/Horiseon-Picture.png" alt="Picture of Horiseon Project">
-          <!-- set up of text tag over project -->
+          <!-- set up of text title over project image -->
         <section class="feature-title">
           <h3>Horiseon</h3>
           <p>SEO and Accessibility</p>
@@ -73,16 +76,18 @@
         <section class="small-features">
           <a class="project-links" href="https://coldweatherboyy.github.io/landing-page-2" target="_blank" rel="noopener noreferrer">
           <img src="./assets/images/Landing-Page-2.jpg" alt="screenshot of a landing page with a meme of Stove Buscemi built for Columbia Engineering Bootcamp">
+            <!-- set up of text title over project image -->
             <section class="feature-title-small">
               <h3>Mini-Project</h3>
               <p>Working with Advanced CSS</p>
             </section>
           </a>
         </section>
-        <!-- the other smaller flex-childs -->
+        <!-- the other smaller flex-child -->
           <section class="small-features">
             <a class="project-links" href="https://coldweatherboyy.github.io/prework-study-guide/" target="_blank" rel="noopener noreferrer">
             <img src="./assets/images/prework-study-page.jpg" alt="squared off image of the study guide built for Columbia Engineering Bootcamp prework">
+              <!-- set up of text title over project image -->
               <section class="feature-title-small">
                 <h3>Prework Study Guide</h3>
                 <p> Basic HTML, CSS, & JS</p>
@@ -90,14 +95,19 @@
             </a>
           </section>
     </section>
+    <!-- end nested flexbox -->
   </main>
+  <!-- end main flexbox -->
 
   <!-- start of footer flex-box -->
   <footer>
+    <!-- flex child 1 -->
     <section id="contact-me">
       <h4>Contact Me!</h4>
     </section>
+    <!-- flex child 2 -->
     <nav id="contact-info" class="bottom-nav">
+      <!-- flexbox for bottom nav orientation on larger screens -->
       <ul class="bottom-nav-list">
         <li><a href="tel:607-592-5831">607-592-5831</a></li>
         <li><a href="mailto:elias.spector.zabusky@gmail.com" target="_blank" rel="noreferrer noopener">Email Me Here!</a></li>
@@ -106,5 +116,6 @@
       </ul>
     </nav>
   </footer>
+  <!-- end flexbox -->
 </body>
 </html>
