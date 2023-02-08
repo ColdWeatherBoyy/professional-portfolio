@@ -378,8 +378,8 @@ footer {
   header {
     height: 150px;
   }
-
-  li {
+  
+  .header-nav-list li {
     margin: 8px 30px;
   }
 
