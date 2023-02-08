@@ -12,6 +12,7 @@ No installation required, please just visit and enjoy!
 
 Please click [here](https://coldweatherboyy.github.io/professional-portfolio/) to view deployed site. Below, please find three screenshots of deployed site for desktop, tablet, and smart phone sizes. Sizes for iPad Air and iPhone12Pro used for their respective categories.
 
+<section style=>
 <img src="./assets/images/desktop_screenshot.png" width=45% height=45% alt="desktop screenshot">
 <img src="./assets/images/iPadAir_screenshot.png" width=29% height=29% alt="tablet screenshot">
 <img src="./assets/images/iPhone12Pro_screenshot.png" width=20% height=20% alt="smartphone screenshot">
