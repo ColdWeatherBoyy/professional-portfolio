@@ -1,3 +1,11 @@
+/* establishing variables */
+:root {
+  --dark: #203354;
+  --light: #B8C7F1;
+  --accent: #005D82;
+  --darkgray: 83, 83, 83;
+}
+
 html {
   height: 100%;
 }
@@ -9,12 +17,39 @@ body {
   font-size: 18px;
   display: flex;
   flex-flow: column;
-  color: #203354;
-  background-color: #B8C7F1;
+  color: var(--dark);
+  background-color: var(--light);
 }
 
-/* base font-sizes for header elements */
-h1, h2, h3, h4, h5, h6 {
+/* type selectors for some general properties */
+header, footer {
+  background-color: var(--accent);
+  color:var(--light);
+}
+
+li {
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 8px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+p {
+  margin: 10px 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* base font-sizes and types for header elements */
+h1, h2, h3, h4 {
   font-weight: bolder;
 }
 
@@ -23,27 +58,21 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25em;
-}
-
-h3 {
   font-size: 2em;
 }
 
-h4 {
+h3 {
   font-size: 1.75em;
 }
 
-h5 {
-  font-size: 1.5em;
+h4 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-/* type selectors ordered by HTML */
-header, footer {
-  background-color: #005D82;
-  color:#B8C7F1;
-}
-
+/* selectors ordered by HTML */
+/* start of header flex-box */
 header {
   display: flex;
   flex-flow: column;
@@ -51,11 +80,11 @@ header {
   justify-content: center;
 }
 
-h1 {
-  background-color:#B8C7F1;
-  color: #005D82;
+/* classes to create different options for length of name for H1*/
+.small-screen-name, .big-screen-name {
+  background-color:var(--light);
+  color: var(--accent);
   padding: 15px;
-  margin-bottom: 5px;
   border-radius: 10px;
 }
 
@@ -63,210 +92,164 @@ h1 {
   display: none;
 }
 
-nav {
-  align-self: center;
-  padding-top: 5px;
-}
-
-li {
-  text-decoration: none;
-  font-size: x-large;
-  margin: 8px;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: #B8C7F1;
-}
-
-/* link underline pseudo-class */
+/* pseudo-class enabling underline on hover for links within list items */
 li a:hover {
-  border-bottom: .1em solid #B8C7F1
+  border-bottom: .1em solid var(--light)
 }
+/* end header flex-box. children include one of above sections (depending on screen size) and nav (or .header-nav) */
 
-p {
-  margin: 10px 20px;
-}
-
+/* start of hero image flexbox */
 figure {
   display: flex;
   align-items: flex-end;
   justify-content: right;
 }
 
-/* setting up banner hero image with overlaid text */
+/* utilizing background image for hero image/avatar */
 .hero-image {
   height: 25vw;
   background-image: url("../images/elias_banner.jpeg");
   background-position: center 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 20px;  
+  margin-bottom: 2%;  
 }
 
-/* class set for text sub */
+/* only child element of figure, used to orient text on image */
 .hero-text {
-  margin-bottom: 2%;
-  margin-right: 1%;
-  padding: 5px;
-  background-color:#B8C7F1;
-  color: #005D82;
+  margin: 0 1% 1% 0;
+  padding: 10px;
+  background-color: var(--light);
+  color: var(--accent);
   border-radius: 20px;
   text-align: center;
-  font-size: 100%;
 }
+/* end figure flexbox */
 
-/* sets up next flex-box */
+/* start of main flexbox */
 main {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 
-/* creating border bar */
+/* child elements are #about-me, .content-about-me, #work, and .portfolio-links; not all are selectors here */
 .content-about-me {
   border-top: 2px solid black;
   margin: 10px 30px;
 }
 
-.content-about-me span a {
-  color: #203354;
+/* styling for span contact link */
+.link-underline a {
+  color: var(--dark);
   text-decoration: underline;
 }
 
-.content-about-me span a:hover {
-  background-color: #203354;
-  color: #B8C7F1;
+/* same as above */
+.link-underline a:hover {
+  background-color: var(--dark);
+  color: var(--light);
 }
 
-/* creating border bar for next section */
-/* also starts internal nested flex-box */
+/* child element of main flexbox, and beginning of nested flex-box for Work section */
 .portfolio-links {
   border-top: 2px solid black;
-  padding-top: 1%;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 30px 10px 30px;
+  justify-content: space-around;
+  margin: 10px 30px;
 }
 
-.project-links img:hover {
-  Opacity: 50%;
-}
-
-.feature-title:hover, .feature-title-small:hover {
-  box-shadow: 0px 0px 20px rgb(83, 83, 83, 1);
-}
-
-/* nested flex-child – big feature */
-.big-feature {
+/* nested child flex element of .portfolio-links. Establishes position relative for .feature-title(-small) formatting*/
+.big-feature, .small-features {
   box-sizing: border-box;
   padding: 1.5%;
-  background-color: rgb(83, 83, 83);
+  background-color: rgb(var(--darkgray));
   border: 1px solid black;
-  margin: 2% 4% 1% 4%;
   position: relative;
+}
+
+.big-feature {
+  margin: 2% 4% 1% 4%;
   flex-basis: 96%;
 }
 
-/* text box overlaid on project features */
-.feature-title {
-  background-color: rgb(83, 83, 83);
-  color: aliceblue;
+.small-features {
+  flex-basis: 42%;
+}
+
+/* text boxes overlaid on project images */
+.feature-title, .feature-title-small {
+  background-color: rgb(var(--darkgray));
+  color: var(--light);
   position: absolute;
   bottom: 10%;
   left: 1.5%;
   padding: 1%;
   line-height: 1.25;
+  transition: box-shadow .15s;
 }
 
-.feature-title h4{
+.feature-title {
+  left: 1.5%
+}
+
+.feature-title-small {
+  left: 3%;
+}
+
+/* text decoration and dynamic viewport-based text sizing for responsive design*/
+.feature-title h3{
   font-size: 6vw;
-  text-align: center;
   font-style: italic;
-  text-decoration: none;
   text-align: left;
 }
 
 .feature-title p {
   font-size: 2.5vw;
-  text-align: left;
   margin: 0;
+  text-align: left;
 }
 
-/* nested flex-child – two that have to share a row */
-.small-features {
-  box-sizing: border-box;
-  padding: 1.5%;
-  background-color: rgb(83, 83, 83);
-  border: 1px solid black;
-  flex-basis: 42%;
-  margin: 1% 4% 2% 4%;
-  position: relative;
-}
-
-/* text overlaid on smaller projects */
-.feature-title-small {
-  background-color: rgb(83, 83, 83);
-  color: aliceblue;
-  position: absolute;
-  bottom: 10%;
-  left: 3%;
-  padding: 1%;
-  line-height: 1.25;
-}
-
-.feature-title-small h4{
-  font-size: 2.5vw;
-  text-align: center;
+.feature-title-small h3{
+  font-size: 2.75vw;
   font-style: italic;
-  text-decoration: none;
   text-align: left;
 }
 
 .feature-title-small p {
-  font-size: 1.5vw;
+  font-size: 2vw;
   text-align: left;
   margin: 0;
 }
 
-/* controls for image sizing within their container */
-.big-feature img {
-  width: 100%;
-  height: auto;
+/* pseudo-class for hovering on image for image and project title text */
+.project-links img:hover {
+  Opacity: 50%;
 }
 
-.small-features img {
-  width: 100%;
-  height: auto;
+.feature-title:hover, .feature-title-small:hover {
+  box-shadow: 0px 0px 20px rgb(var(--darkgray), 1);
 }
 
-/* sets up footer flex-box */
+/* sets up footer flex-box. children: #contact-me and .bottom-nav */
 footer {
   display: flex;
   flex-flow: column;
-  align-items: stretch;
-  padding: 1% 0;
+  padding: 2% 0;
 }
 
-#contact-me h5 {
-  font-size: 2em;
-  margin: 2px 0;
-  text-align: center;
-}
-
-#contact-info {
+/* establishes a flexbox to structure its child ul */
+.bottom-nav {
   display: flex;
   flex-direction: column;
-  border-top: 2px solid #B8C7F1;
+  border-top: 2px solid var(--light);
   margin: 0 30px;
 } 
 
-#contact-info ul li {
+.bottom-nav-list li {
   font-size: 1em;
-  color:#B8C7F1;
+  color:var(--light);
 }
 
 /* media queries for tablet */
@@ -274,35 +257,53 @@ footer {
 /* change of border location, reconfigures flex boxes */
 
 @media screen and (min-width:650px) {
+  /* first restructure several flexboxes to flex row */
   header {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    padding: 5px 15px;
+    align-items: flex-start;
+    padding: 15px;
+    height: 125px;
   }
-
-  header h1 {
-    margin: 10px 0;
-  }
-
-  header nav {
-    align-self: flex-end;
-  }
-
-
-  header nav ul {
-    display:flex;
-    flex-flow:row;
-  }
-
-  .hero-text {
-    font-size: 125%;
-  }
-
+  
   main {
     display: flex;
     flex-flow: row wrap;
     align-items: start;
+  }
+  
+  footer {
+    display: flex;
+    flex-flow: row;
+  }
+
+  /* with flex row, new formatting needed */
+  .header-nav {
+    align-self: flex-end;
+  }
+  /* creates flexbox to reorient nav bar */
+  .header-nav-list {
+    display:flex;
+    flex-flow:row;
+  }
+
+  li {
+    margin: 8px 10px;
+  }
+
+  /* new font-size for new screen */
+  .hero-text {
+    font-size: 125%;
+  }
+
+  /* reorients border bar, new convention for structuring the main flexbox with unevenly split columns in this selector and the following one */
+  .content-about-me, .portfolio-links {
+    border-left: 2px solid black;
+    border-top: 0;
+    width: 77%;
+    flex-basis: 77%;
+    margin: 1% 0;
   }
 
   #about-me, #work {
@@ -312,15 +313,12 @@ footer {
     margin: 1% 2%;
   }
 
-  .content-about-me, .portfolio-links {
-    border-left: 2px solid black;
-    border-top: 0;
-    width: 77%;
-    flex-basis: 77%;
-    margin: 1% 0;
+  .content-about-me p {
+    padding: 0 2%;
   }
 
-  .feature-title h4{
+  /* feature title font sizing adjusted for screen size */
+  .feature-title h3{
     font-size: 4.75vw;
   }
 
@@ -328,7 +326,7 @@ footer {
     font-size: 2vw;
   }
 
-  .feature-title-small h4{
+  .feature-title-small h3{
     font-size: 2vw;
   }
   
@@ -336,32 +334,9 @@ footer {
     font-size: 1.25vw;
   }
 
-  footer {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    width: 100%;
-    align-items: stretch;
-    padding: 2% 0;
-  }
-  
-  #contact-me {
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    width: 17%;
-    flex-basis: 17%;
-    margin: 2% 2% 2% 2%;
-  }
-
-  #contact-me h5 {
-    text-align: right;
-  }
-  
-  #contact-info {
-    display: flex;
-    flex-direction: row;
-    border-left: 2px solid #B8C7F1;
+  /* adjust border bar in footer, begins mirror footer flexbox to reflect main flexbox in next two selectors */
+  .bottom-nav {
+    border-left: 2px solid var(--light);
     border-top: 0;
     margin: 0;
     width: 77%;
@@ -369,32 +344,56 @@ footer {
     justify-content: center;
   }
   
-  #contact-info ul {
+  #contact-me {
+    width: 17%;
+    flex-basis: 17%;
+    margin: 2% 2% 2% 2%;
+  }
+
+  /* establishes flex row flexbox for bottom nav for horizontal alignment */
+  .bottom-nav-list {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
   }
   
-  #contact-info ul li {
-    font-size: 1.25em;
-    color:#B8C7F1;
+  /* new header formatting */
+  h4 {
+    font-size: 1.75em;
+    text-align: right;
+    margin: 1% 2%;
   }
 
-
+  /* formatting for bottom nav list items */
+  .bottom-nav-list li {
+    font-size: 1.25em;
+    color:var(--light);
+  }
 }
 
 /* media queries for desktop */
 @media screen and (min-width:1100px) {
+  /* additional formatting for largeer screens */
+  header {
+    height: 150px;
+  }
+
+  li {
+    margin: 8px 30px;
+  }
+
+  /* switch to using full last name */
   .big-screen-name {
     display: block;
+
   }
   .small-screen-name {
     display: none;
   }
-  
-  .feature-title h4{
+
+  /* further text-sizing updates to featured project titles */
+  .feature-title h3{
     font-size: 4.5vw;
   }
 
@@ -402,7 +401,7 @@ footer {
     font-size: 1.75vw;
   }
 
-  .feature-title-small h4{
+  .feature-title-small h3{
     font-size: 1.75vw;
   }
   
