@@ -252,6 +252,10 @@ footer {
   color:var(--light);
 }
 
+.special:hover a {
+  color:white;
+}
+
 /* media queries for tablet */
 
 /* change of border location, reconfigures flex boxes */
